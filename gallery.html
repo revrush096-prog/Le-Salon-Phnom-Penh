@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editorial Visual Gallery | Le Salon Phnom Penh</title>
+  <meta name="description" content="Immerse yourself in the visual world of Le Salon Phnom Penh: hair couture, fine nail atelier, calm salon interiors, and beauty craftsmanship.">
+  <link rel="canonical" href="https://maps.app.goo.gl/MwFyLr1H8VQd4ocv5">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            salon: {
+              ivory: '#FAF8F5',
+              cream: '#F6F2EB',
+              sand: '#EDE6DB',
+              champagne: '#E2D7C7',
+              gold: '#C5A880',
+              'gold-dark': '#9F825A',
+              espresso: '#1A1513',
+              'espresso-light': '#28221E',
+              muted: '#7A726A'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Le Salon Phnom Penh",
+    "telephone": "+85570467412",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Preah Ang Non (St. 102)",
+      "addressLocality": "Phnom Penh",
+      "postalCode": "12202",
+      "addressCountry": "KH"
+    },
+    "url": "https://maps.app.goo.gl/MwFyLr1H8VQd4ocv5"
+  }
+  </script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1A1513] font-sans antialiased overflow-x-hidden selection:bg-[#C5A880]/30">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 header-transparent">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <a href="index.html" class="group flex flex-col items-start focus:outline-none">
+        <span class="logo-text text-xl sm:text-2xl tracking-[0.28em] font-serif uppercase text-white transition-colors duration-300 group-hover:text-[#C5A880]">
+          LE SALON
+        </span>
+        <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">
+          PHNOM PENH
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 lg:space-x-9 text-xs tracking-[0.18em] uppercase font-medium">
+        <a href="index.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Home</a>
+        <a href="about.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">About</a>
+        <a href="services.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Services</a>
+        <a href="gallery.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Gallery</a>
+        <a href="experience.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Experience</a>
+        <a href="booking.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Booking</a>
+        <a href="contact.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="booking.html" class="hidden sm:inline-flex luxury-button-gold px-5 py-2.5 rounded-none text-xs tracking-[0.16em]">
+          Book an Appointment
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OVER DRAWER -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/60 z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#1A1513] text-white z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-8 border-l border-[#C5A880]/20 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-8 border-b border-white/10">
+        <div class="flex flex-col">
+          <span class="text-xl tracking-[0.25em] font-serif uppercase text-white">LE SALON</span>
+          <span class="text-[8px] tracking-[0.35em] uppercase text-[#C5A880]">PHNOM PENH</span>
+        </div>
+        <button id="close-mobile-menu" class="text-white/70 hover:text-white p-1" aria-label="Close Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-5 pt-8 text-sm tracking-[0.2em] uppercase">
+        <a href="index.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Home</a>
+        <a href="about.html" class="text-white/80 hover:text-[#C5A880] transition-colors">About</a>
+        <a href="services.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Services</a>
+        <a href="gallery.html" class="text-white hover:text-[#C5A880] transition-colors">Gallery</a>
+        <a href="experience.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Experience</a>
+        <a href="booking.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Booking</a>
+        <a href="contact.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pt-8 border-t border-white/10 space-y-4">
+      <a href="booking.html" class="block w-full text-center luxury-button-gold py-3 text-xs">
+        Book an Appointment
+      </a>
+      <a href="tel:+85570467412" class="flex items-center justify-center space-x-2 text-xs tracking-wider text-[#C5A880]">
+        <span>+855 70 467 412</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- GALLERY HERO -->
+    <section class="relative min-h-[480px] flex items-center justify-center bg-[#1A1513] text-white overflow-hidden pt-24 pb-16">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80" alt="Le Salon Gallery" class="w-full h-full object-cover opacity-35">
+        <div class="cinematic-overlay"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-4">
+        <span class="text-xs tracking-[0.35em] uppercase text-[#C5A880] font-medium">
+          EDITORIAL ARCHIVE
+        </span>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-light tracking-tight text-white">
+          Visual Gallery
+        </h1>
+        <p class="text-sm sm:text-base text-white/80 font-light max-w-xl mx-auto">
+          An artistic curation of salon spaces, craftsmanship, and Parisian-inspired beauty styling in Phnom Penh.
+        </p>
+      </div>
+    </section>
+
+    <!-- FILTER BAR -->
+    <div class="sticky top-[73px] z-30 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-[#E2D7C7] py-4">
+      <div class="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+        <button data-filter="all" class="gallery-filter-btn px-5 py-2 text-xs tracking-[0.18em] uppercase border transition-all duration-300 bg-[#1A1513] text-white border-[#1A1513]">
+          All
+        </button>
+        <button data-filter="hair" class="gallery-filter-btn px-5 py-2 text-xs tracking-[0.18em] uppercase border transition-all duration-300 bg-transparent text-[#7A726A] border-[#E2D7C7] hover:border-[#C5A880]">
+          Hair
+        </button>
+        <button data-filter="nails" class="gallery-filter-btn px-5 py-2 text-xs tracking-[0.18em] uppercase border transition-all duration-300 bg-transparent text-[#7A726A] border-[#E2D7C7] hover:border-[#C5A880]">
+          Nails
+        </button>
+        <button data-filter="beauty" class="gallery-filter-btn px-5 py-2 text-xs tracking-[0.18em] uppercase border transition-all duration-300 bg-transparent text-[#7A726A] border-[#E2D7C7] hover:border-[#C5A880]">
+          Beauty
+        </button>
+        <button data-filter="interior" class="gallery-filter-btn px-5 py-2 text-xs tracking-[0.18em] uppercase border transition-all duration-300 bg-transparent text-[#7A726A] border-[#E2D7C7] hover:border-[#C5A880]">
+          Interior
+        </button>
+        <button data-filter="details" class="gallery-filter-btn px-5 py-2 text-xs tracking-[0.18em] uppercase border transition-all duration-300 bg-transparent text-[#7A726A] border-[#E2D7C7] hover:border-[#C5A880]">
+          Details
+        </button>
+      </div>
+    </div>
+
+    <!-- MASONRY / EDITORIAL GALLERY GRID -->
+    <section class="py-16 lg:py-24 bg-[#FAF8F5]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          
+          <!-- Item 1: Hair -->
+          <div class="gallery-item group relative overflow-hidden bg-[#EDE6DB] border border-[#E2D7C7] cursor-pointer transition-all duration-500 hover:shadow-2xl"
+               data-category="hair"
+               data-category-name="Hair Couture"
+               data-title="Editorial Balayage & Flowing Waves"
+               data-highres="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=1600&q=85">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?auto=format&fit=crop&w=800&q=80" alt="Editorial Balayage & Flowing Waves" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] tracking-[0.25em] uppercase text-[#C5A880]">Hair Couture</span>
+              <h3 class="text-xl font-serif">Editorial Balayage & Waves</h3>
+              <span class="text-xs text-white/70 mt-1">Click to view in high resolution ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 2: Interior -->
+          <div class="gallery-item group relative overflow-hidden bg-[#EDE6DB] border border-[#E2D7C7] cursor-pointer transition-all duration-500 hover:shadow-2xl"
+               data-category="interior"
+               data-category-name="Atelier Interior"
+               data-title="Modern Phnom Penh Salon Sanctuary"
+               data-highres="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=85">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=800&q=80" alt="Modern Phnom Penh Salon Sanctuary" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] tracking-[0.25em] uppercase text-[#C5A880]">Atelier Interior</span>
+              <h3 class="text-xl font-serif">Styling Suite Ambiance</h3>
+              <span class="text-xs text-white/70 mt-1">Click to view in high resolution ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 3: Nails -->
+          <div class="gallery-item group relative overflow-hidden bg-[#EDE6DB] border border-[#E2D7C7] cursor-pointer transition-all duration-500 hover:shadow-2xl"
+               data-category="nails"
+               data-category-name="Nail Atelier"
+               data-title="European Manicure & Nourishing Hydration"
+               data-highres="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=1600&q=85">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?auto=format&fit=crop&w=800&q=80" alt="European Manicure and Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] tracking-[0.25em] uppercase text-[#C5A880]">Nail Atelier</span>
+              <h3 class="text-xl font-serif">Meticulous Cuticle Care</h3>
+              <span class="text-xs text-white/70 mt-1">Click to view in high resolution ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 4: Hair -->
+          <div class="gallery-item group relative overflow-hidden bg-[#EDE6DB] border border-[#E2D7C7] cursor-pointer transition-all duration-500 hover:shadow-2xl"
+               data-category="hair"
+               data-category-name="Hair Couture"
+               data-title="Precision Styling & Thermal Care"
+               data-highres="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1600&q=85">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80" alt="Precision Styling and Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] tracking-[0.25em] uppercase text-[#C5A880]">Hair Couture</span>
+              <h3 class="text-xl font-serif">Sculpted Evening Hair</h3>
+              <span class="text-xs text-white/70 mt-1">Click to view in high resolution ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 5: Beauty -->
+          <div class="gallery-item group relative overflow-hidden bg-[#EDE6DB] border border-[#E2D7C7] cursor-pointer transition-all duration-500 hover:shadow-2xl"
+               data-category="beauty"
+               data-category-name="Beauty Rituals"
+               data-title="Sensory Facial & Skin Restoration"
+               data-highres="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1600&q=85">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Sensory Facial and Skin Care" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] tracking-[0.25em] uppercase text-[#C5A880]">Beauty Rituals</span>
+              <h3 class="text-xl font-serif">Restorative Skin Therapy</h3>
+              <span class="text-xs text-white/70 mt-1">Click to view in high resolution ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 6: Details -->
+          <div class="gallery-item group relative overflow-hidden bg-[#EDE6DB] border border-[#E2D7C7] cursor-pointer transition-all duration-500 hover:shadow-2xl"
+               data-category="details"
+               data-category-name="Salon Details"
+               data-title="Botanical Elixirs & Haircare Formulations"
+               data-highres="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1600&q=85">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80" alt="Botanical Elixirs and Formulations" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] tracking-[0.25em] uppercase text-[#C5A880]">Salon Details</span>
+              <h3 class="text-xl font-serif">Botanical Formulation Bar</h3>
+              <span class="text-xs text-white/70 mt-1">Click to view in high resolution ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 7: Nails -->
+          <div class="gallery-item group relative overflow-hidden bg-[#EDE6DB] border border-[#E2D7C7] cursor-pointer transition-all duration-500 hover:shadow-2xl"
+               data-category="nails"
+               data-category-name="Nail Atelier"
+               data-title="Minimalist Editorial Nail Art"
+               data-highres="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=1600&q=85">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1599940824399-b87987ceb72a?auto=format&fit=crop&w=800&q=80" alt="Minimalist Editorial Nail Art" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] tracking-[0.25em] uppercase text-[#C5A880]">Nail Atelier</span>
+              <h3 class="text-xl font-serif">Refined Nail Detailing</h3>
+              <span class="text-xs text-white/70 mt-1">Click to view in high resolution ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 8: Hair -->
+          <div class="gallery-item group relative overflow-hidden bg-[#EDE6DB] border border-[#E2D7C7] cursor-pointer transition-all duration-500 hover:shadow-2xl"
+               data-category="hair"
+               data-category-name="Hair Couture"
+               data-title="Color Formulation & Strand Diagnostics"
+               data-highres="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1600&q=85">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=800&q=80" alt="Color Consultation and Hair Dressing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] tracking-[0.25em] uppercase text-[#C5A880]">Hair Couture</span>
+              <h3 class="text-xl font-serif">Dimensional Tone Placement</h3>
+              <span class="text-xs text-white/70 mt-1">Click to view in high resolution ↗</span>
+            </div>
+          </div>
+
+          <!-- Item 9: Details -->
+          <div class="gallery-item group relative overflow-hidden bg-[#EDE6DB] border border-[#E2D7C7] cursor-pointer transition-all duration-500 hover:shadow-2xl"
+               data-category="details"
+               data-category-name="Salon Details"
+               data-title="Artisan Beauty Tools & Warm Atmosphere"
+               data-highres="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=1600&q=85">
+            <div class="aspect-[3/4] overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80" alt="Artisan Beauty Tools" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-white">
+              <span class="text-[10px] tracking-[0.25em] uppercase text-[#C5A880]">Salon Details</span>
+              <h3 class="text-xl font-serif">Artisanal Tools & Finishes</h3>
+              <span class="text-xs text-white/70 mt-1">Click to view in high resolution ↗</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FULLSCREEN INTERACTIVE LIGHTBOX MODAL -->
+    <div id="gallery-lightbox" class="fixed inset-0 z-50 hidden lightbox-backdrop flex items-center justify-center p-4 sm:p-8">
+      <div id="lightbox-backdrop" class="absolute inset-0 bg-black/90 backdrop-blur-md"></div>
+      
+      <!-- Close Button -->
+      <button id="lightbox-close" class="absolute top-6 right-6 z-20 text-white/70 hover:text-white p-2 rounded-full bg-white/10 hover:bg-white/20 transition-all focus:outline-none" aria-label="Close Lightbox">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <!-- Prev Button -->
+      <button id="lightbox-prev" class="absolute left-4 sm:left-8 top-1/2 transform -translate-y-1/2 z-20 text-white/70 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all focus:outline-none" aria-label="Previous Image">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+
+      <!-- Next Button -->
+      <button id="lightbox-next" class="absolute right-4 sm:right-8 top-1/2 transform -translate-y-1/2 z-20 text-white/70 hover:text-white p-3 rounded-full bg-white/10 hover:bg-white/20 transition-all focus:outline-none" aria-label="Next Image">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+
+      <!-- Lightbox Main Container -->
+      <div class="relative z-10 max-w-5xl max-h-[88vh] w-full flex flex-col items-center justify-center lightbox-content">
+        <div class="relative overflow-hidden max-h-[75vh] flex items-center justify-center">
+          <img id="lightbox-img" src="" alt="" class="max-h-[75vh] w-auto max-w-full object-contain shadow-2xl transition-all duration-300">
+        </div>
+        <div class="w-full text-center text-white mt-4 space-y-1">
+          <span id="lightbox-category" class="text-[10px] tracking-[0.3em] uppercase text-[#C5A880] block font-medium"></span>
+          <h3 id="lightbox-title" class="text-lg sm:text-xl font-serif"></h3>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="bg-[#14100E] text-white border-t border-white/10 pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4 space-y-4">
+          <a href="index.html" class="inline-flex flex-col">
+            <span class="text-2xl tracking-[0.28em] font-serif uppercase text-white">LE SALON</span>
+            <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">PHNOM PENH</span>
+          </a>
+          <p class="text-sm font-serif italic text-white/70">Beauty, Refined.</p>
+          <p class="text-xs text-white/60 font-light leading-relaxed max-w-sm">
+            Parisian elegance meets modern Phnom Penh luxury. Providing bespoke hair couture, restorative nail care, and serene beauty rituals.
+          </p>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Navigation</h4>
+          <ul class="space-y-2.5 text-xs tracking-wider uppercase text-white/70">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Le Salon</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Signature Services</a></li>
+            <li><a href="gallery.html" class="hover:text-white transition-colors">Visual Gallery</a></li>
+            <li><a href="experience.html" class="hover:text-white transition-colors">Our Experience</a></li>
+            <li><a href="booking.html" class="hover:text-white transition-colors">Book an Appointment</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Location & Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Contact Le Salon</h4>
+          <address class="not-italic text-xs text-white/70 space-y-2 leading-relaxed">
+            <p>Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+            <p>Telephone: <a href="tel:+85570467412" class="text-white hover:text-[#C5A880] font-medium">+855 70 467 412</a></p>
+            <p class="text-white/50 italic pt-1">Opening hours — Please contact us for current availability</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="pt-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 tracking-wider">
+        <p>© 2026 Le Salon Phnom Penh. All Rights Reserved.</p>
+        <p class="mt-4 sm:mt-0 text-[11px] text-white/40">Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

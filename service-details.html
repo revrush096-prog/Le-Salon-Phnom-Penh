@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Details | Le Salon Phnom Penh</title>
+  <meta name="description" content="Explore bespoke beauty rituals, precision hair styling, and restorative nail treatments at Le Salon Phnom Penh. In-depth service details and expectations.">
+  <link rel="canonical" href="https://maps.app.goo.gl/MwFyLr1H8VQd4ocv5">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            salon: {
+              ivory: '#FAF8F5',
+              cream: '#F6F2EB',
+              sand: '#EDE6DB',
+              champagne: '#E2D7C7',
+              gold: '#C5A880',
+              'gold-dark': '#9F825A',
+              espresso: '#1A1513',
+              'espresso-light': '#28221E',
+              muted: '#7A726A'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/services-data.js"></script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1A1513] font-sans antialiased overflow-x-hidden selection:bg-[#C5A880]/30">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 header-transparent">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <a href="index.html" class="group flex flex-col items-start focus:outline-none">
+        <span class="logo-text text-xl sm:text-2xl tracking-[0.28em] font-serif uppercase text-white transition-colors duration-300 group-hover:text-[#C5A880]">
+          LE SALON
+        </span>
+        <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">
+          PHNOM PENH
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 lg:space-x-9 text-xs tracking-[0.18em] uppercase font-medium">
+        <a href="index.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Home</a>
+        <a href="about.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">About</a>
+        <a href="services.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Services</a>
+        <a href="gallery.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Gallery</a>
+        <a href="experience.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Experience</a>
+        <a href="booking.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Booking</a>
+        <a href="contact.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="booking.html" class="hidden sm:inline-flex luxury-button-gold px-5 py-2.5 rounded-none text-xs tracking-[0.16em]">
+          Book an Appointment
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OVER DRAWER -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/60 z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#1A1513] text-white z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-8 border-l border-[#C5A880]/20 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-8 border-b border-white/10">
+        <div class="flex flex-col">
+          <span class="text-xl tracking-[0.25em] font-serif uppercase text-white">LE SALON</span>
+          <span class="text-[8px] tracking-[0.35em] uppercase text-[#C5A880]">PHNOM PENH</span>
+        </div>
+        <button id="close-mobile-menu" class="text-white/70 hover:text-white p-1" aria-label="Close Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-5 pt-8 text-sm tracking-[0.2em] uppercase">
+        <a href="index.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Home</a>
+        <a href="about.html" class="text-white/80 hover:text-[#C5A880] transition-colors">About</a>
+        <a href="services.html" class="text-white hover:text-[#C5A880] transition-colors">Services</a>
+        <a href="gallery.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Gallery</a>
+        <a href="experience.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Experience</a>
+        <a href="booking.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Booking</a>
+        <a href="contact.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pt-8 border-t border-white/10 space-y-4">
+      <a href="booking.html" class="block w-full text-center luxury-button-gold py-3 text-xs">
+        Book an Appointment
+      </a>
+      <a href="tel:+85570467412" class="flex items-center justify-center space-x-2 text-xs tracking-wider text-[#C5A880]">
+        <span>+855 70 467 412</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- TOP SERVICE BANNER -->
+    <section class="relative min-h-[380px] sm:min-h-[440px] flex items-center justify-center bg-[#1A1513] text-white pt-24 pb-12 overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img id="banner-img" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80" alt="Le Salon Service Details" class="w-full h-full object-cover opacity-30">
+        <div class="cinematic-overlay"></div>
+      </div>
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-3">
+        <div class="inline-flex items-center space-x-2 text-xs tracking-[0.3em] uppercase text-[#C5A880]">
+          <a href="services.html" class="hover:underline">Services</a>
+          <span>/</span>
+          <span id="breadcrumb-category">Hair Couture</span>
+        </div>
+        <h1 id="service-title-top" class="text-3xl sm:text-5xl lg:text-6xl font-serif font-light tracking-tight text-white">
+          Precision Haircut
+        </h1>
+        <p id="service-price-top" class="text-xs tracking-widest uppercase text-white/70 italic">
+          Price available on request
+        </p>
+      </div>
+    </section>
+
+    <!-- MAIN TWO-COLUMN SERVICE DETAILS -->
+    <section class="py-20 lg:py-28 bg-[#FAF8F5]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          <!-- Left: Large Cinematic Service Image -->
+          <div class="lg:col-span-6 space-y-6">
+            <div class="relative card-image-wrapper p-3 bg-white border border-[#E2D7C7] shadow-xl">
+              <div class="relative aspect-[4/5] bg-[#EDE6DB] overflow-hidden">
+                <img id="detail-image" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Service Detail" class="w-full h-full object-cover">
+              </div>
+            </div>
+
+            <!-- Quick Service Selector Pills -->
+            <div class="p-6 bg-white border border-[#E2D7C7] space-y-3">
+              <span class="text-xs tracking-[0.2em] uppercase text-[#9F825A] font-semibold block">Explore Other Services</span>
+              <div class="flex flex-wrap gap-2 text-xs" id="quick-service-pills">
+                <!-- Dynamically populated or static fallback links -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Detailed Service Information -->
+          <div class="lg:col-span-6 space-y-8">
+            
+            <div class="space-y-2">
+              <span id="detail-category-label" class="text-xs tracking-[0.3em] uppercase text-[#9F825A] font-semibold">
+                HAIR COUTURE
+              </span>
+              <h2 id="detail-name" class="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#1A1513]">
+                Precision Haircut
+              </h2>
+              <div class="gold-divider-left"></div>
+            </div>
+
+            <div class="space-y-4 text-[#7A726A] text-base leading-relaxed font-light">
+              <p id="detail-short-desc" class="text-lg text-[#1A1513] font-serif italic">
+                Modern cuts tailored to your personal facial architecture and natural hair movement.
+              </p>
+              <p id="detail-full-desc">
+                An architectural approach to hair design. Our precision haircuts begin with a diagnostic dialogue to understand your daily rhythm, personal aesthetic, and hair texture. Each cut is sculpted with deliberate Parisian precision to ensure effortless grow-out and timeless shape.
+              </p>
+            </div>
+
+            <!-- Benefits -->
+            <div class="space-y-4 pt-2">
+              <h3 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#1A1513] border-b border-[#E2D7C7] pb-2">
+                Service Benefits
+              </h3>
+              <ul id="detail-benefits" class="space-y-2.5 text-sm text-[#7A726A] font-light">
+                <!-- Populated by JS -->
+              </ul>
+            </div>
+
+            <!-- What to Expect -->
+            <div class="space-y-4 pt-2">
+              <h3 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#1A1513] border-b border-[#E2D7C7] pb-2">
+                What to Expect
+              </h3>
+              <div id="detail-steps" class="space-y-3">
+                <!-- Populated by JS -->
+              </div>
+            </div>
+
+            <!-- Actions & Booking Pre-fill -->
+            <div class="pt-6 border-t border-[#E2D7C7] flex flex-col sm:flex-row items-center gap-4">
+              <a id="book-this-service-btn" href="booking.html?service=haircut" class="w-full sm:w-auto luxury-button-gold px-8 py-4 text-xs text-center">
+                Book This Appointment
+              </a>
+              <a href="tel:+85570467412" class="w-full sm:w-auto luxury-button-outline px-6 py-4 text-xs text-center">
+                Inquire via Phone
+              </a>
+            </div>
+
+            <p class="text-[11px] text-[#9F825A] italic">
+              Note: Every service includes an individualized consultation with your stylist. Pricing is available upon consultation.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- UNDERNEATH CINEMATIC ATMOSPHERE SECTION -->
+    <section class="relative py-28 bg-[#1A1513] overflow-hidden text-white">
+      <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1920&q=80" class="cinematic-video-bg opacity-35">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-hairdresser-washing-a-womans-hair-in-a-salon-42862-large.mp4" type="video/mp4">
+      </video>
+      <div class="cinematic-overlay-subtle"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-6">
+        <span class="text-xs tracking-[0.35em] uppercase text-[#C5A880]">THE SALON ATMOSPHERE</span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-light leading-tight">
+          An Unhurried Sensory Experience
+        </h2>
+        <p class="max-w-xl mx-auto text-sm sm:text-base text-white/85 font-light leading-relaxed">
+          From customized hair bath rituals to soothing botanical scalp massage, every minute is dedicated to your complete relaxation.
+        </p>
+        <div class="pt-4">
+          <a href="experience.html" class="luxury-button-outline-light px-8 py-3.5 text-xs">
+            Discover Our 4-Step Experience
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- RELATED SERVICES SECTION -->
+    <section class="py-20 bg-[#F6F2EB] border-t border-[#E2D7C7]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-8">
+        <div class="flex items-center justify-between border-b border-[#E2D7C7] pb-4">
+          <h3 class="text-2xl font-serif text-[#1A1513]">Related Services</h3>
+          <a href="services.html" class="text-xs tracking-widest uppercase font-semibold text-[#1A1513] hover:text-[#C5A880]">View All →</a>
+        </div>
+
+        <div id="related-services-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="bg-[#14100E] text-white border-t border-white/10 pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4 space-y-4">
+          <a href="index.html" class="inline-flex flex-col">
+            <span class="text-2xl tracking-[0.28em] font-serif uppercase text-white">LE SALON</span>
+            <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">PHNOM PENH</span>
+          </a>
+          <p class="text-sm font-serif italic text-white/70">Beauty, Refined.</p>
+          <p class="text-xs text-white/60 font-light leading-relaxed max-w-sm">
+            Parisian elegance meets modern Phnom Penh luxury. Providing bespoke hair couture, restorative nail care, and serene beauty rituals.
+          </p>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Navigation</h4>
+          <ul class="space-y-2.5 text-xs tracking-wider uppercase text-white/70">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Le Salon</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Signature Services</a></li>
+            <li><a href="gallery.html" class="hover:text-white transition-colors">Visual Gallery</a></li>
+            <li><a href="experience.html" class="hover:text-white transition-colors">Our Experience</a></li>
+            <li><a href="booking.html" class="hover:text-white transition-colors">Book an Appointment</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Location & Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Contact Le Salon</h4>
+          <address class="not-italic text-xs text-white/70 space-y-2 leading-relaxed">
+            <p>Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+            <p>Telephone: <a href="tel:+85570467412" class="text-white hover:text-[#C5A880] font-medium">+855 70 467 412</a></p>
+            <p class="text-white/50 italic pt-1">Opening hours — Please contact us for current availability</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="pt-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 tracking-wider">
+        <p>© 2026 Le Salon Phnom Penh. All Rights Reserved.</p>
+        <p class="mt-4 sm:mt-0 text-[11px] text-white/40">Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      renderServiceDetails();
+    });
+
+    function renderServiceDetails() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceId = urlParams.get('service') || 'haircut';
+      const service = window.getServiceById ? window.getServiceById(serviceId) : window.SALON_SERVICES[0];
+
+      if (!service) return;
+
+      // Update Top Banner
+      document.title = `${service.name} | Le Salon Phnom Penh`;
+      const titleTop = document.getElementById('service-title-top');
+      const breadcrumbCat = document.getElementById('breadcrumb-category');
+      const bannerImg = document.getElementById('banner-img');
+
+      if (titleTop) titleTop.textContent = service.name;
+      if (breadcrumbCat) breadcrumbCat.textContent = service.categoryLabel;
+      if (bannerImg) bannerImg.src = service.image;
+
+      // Update Main Side Details
+      const detailImg = document.getElementById('detail-image');
+      const detailCat = document.getElementById('detail-category-label');
+      const detailName = document.getElementById('detail-name');
+      const shortDesc = document.getElementById('detail-short-desc');
+      const fullDesc = document.getElementById('detail-full-desc');
+      const benefitsList = document.getElementById('detail-benefits');
+      const stepsList = document.getElementById('detail-steps');
+      const bookBtn = document.getElementById('book-this-service-btn');
+
+      if (detailImg) {
+        detailImg.src = service.image;
+        detailImg.alt = service.name;
+      }
+      if (detailCat) detailCat.textContent = service.categoryLabel;
+      if (detailName) detailName.textContent = service.name;
+      if (shortDesc) shortDesc.textContent = service.shortDescription;
+      if (fullDesc) fullDesc.textContent = service.fullDescription;
+
+      // Render Benefits
+      if (benefitsList && service.benefits) {
+        benefitsList.innerHTML = service.benefits.map(b => `
+          <li class="flex items-start space-x-3">
+            <span class="w-1.5 h-1.5 rounded-full bg-[#C5A880] mt-2 flex-shrink-0"></span>
+            <span>${b}</span>
+          </li>
+        `).join('');
+      }
+
+      // Render Steps
+      if (stepsList && service.whatToExpect) {
+        stepsList.innerHTML = service.whatToExpect.map(step => `
+          <div class="p-4 bg-white border border-[#E2D7C7] space-y-1">
+            <span class="text-[10px] font-mono tracking-widest text-[#9F825A] uppercase">${step.step}</span>
+            <p class="text-xs sm:text-sm text-[#7A726A] font-light">${step.detail}</p>
+          </div>
+        `).join('');
+      }
+
+      // Update Booking Link
+      if (bookBtn) {
+        bookBtn.href = `booking.html?service=${service.id}`;
+      }
+
+      // Render Quick Pills
+      const pillsContainer = document.getElementById('quick-service-pills');
+      if (pillsContainer && window.SALON_SERVICES) {
+        pillsContainer.innerHTML = window.SALON_SERVICES.map(s => `
+          <a href="service-details.html?service=${s.id}" class="px-3 py-1.5 border ${s.id === service.id ? 'bg-[#1A1513] text-white border-[#1A1513]' : 'bg-transparent text-[#7A726A] border-[#E2D7C7] hover:border-[#C5A880]'} transition-colors">
+            ${s.name}
+          </a>
+        `).join('');
+      }
+
+      // Render Related Services
+      const relatedContainer = document.getElementById('related-services-grid');
+      if (relatedContainer && service.relatedIds && window.SALON_SERVICES) {
+        const related = window.SALON_SERVICES.filter(s => service.relatedIds.includes(s.id));
+        relatedContainer.innerHTML = related.map(rel => `
+          <div class="bg-white border border-[#E2D7C7] flex flex-col justify-between group hover:shadow-lg transition-all">
+            <div class="aspect-[4/3] bg-[#EDE6DB] overflow-hidden">
+              <img src="${rel.image}" alt="${rel.name}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <div class="p-5 space-y-2">
+              <span class="text-[9px] uppercase tracking-widest text-[#9F825A]">${rel.categoryLabel}</span>
+              <h4 class="text-lg font-serif text-[#1A1513]">${rel.name}</h4>
+              <p class="text-xs text-[#7A726A] font-light line-clamp-2">${rel.shortDescription}</p>
+            </div>
+            <div class="p-5 pt-0 border-t border-[#EDE6DB]/50 flex items-center justify-between">
+              <a href="service-details.html?service=${rel.id}" class="text-xs font-medium text-[#1A1513] hover:text-[#C5A880]">Learn More →</a>
+              <a href="booking.html?service=${rel.id}" class="text-[10px] luxury-button-gold px-3 py-1.5">Book</a>
+            </div>
+          </div>
+        `).join('');
+      }
+    }
+  </script>
+</body>
+</html>

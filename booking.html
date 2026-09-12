@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Appointment | Le Salon Phnom Penh</title>
+  <meta name="description" content="Request a personal appointment at Le Salon Phnom Penh. Choose your bespoke hair, nail, or beauty ritual and schedule your visit in Phnom Penh, Cambodia.">
+  <link rel="canonical" href="https://maps.app.goo.gl/MwFyLr1H8VQd4ocv5">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            salon: {
+              ivory: '#FAF8F5',
+              cream: '#F6F2EB',
+              sand: '#EDE6DB',
+              champagne: '#E2D7C7',
+              gold: '#C5A880',
+              'gold-dark': '#9F825A',
+              espresso: '#1A1513',
+              'espresso-light': '#28221E',
+              muted: '#7A726A'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/services-data.js"></script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1A1513] font-sans antialiased overflow-x-hidden selection:bg-[#C5A880]/30">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 header-transparent">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <a href="index.html" class="group flex flex-col items-start focus:outline-none">
+        <span class="logo-text text-xl sm:text-2xl tracking-[0.28em] font-serif uppercase text-white transition-colors duration-300 group-hover:text-[#C5A880]">
+          LE SALON
+        </span>
+        <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">
+          PHNOM PENH
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 lg:space-x-9 text-xs tracking-[0.18em] uppercase font-medium">
+        <a href="index.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Home</a>
+        <a href="about.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">About</a>
+        <a href="services.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Services</a>
+        <a href="gallery.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Gallery</a>
+        <a href="experience.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Experience</a>
+        <a href="booking.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Booking</a>
+        <a href="contact.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="tel:+85570467412" class="hidden sm:inline-flex luxury-button-outline-light px-5 py-2.5 rounded-none text-xs tracking-[0.16em]">
+          +855 70 467 412
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OVER DRAWER -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/60 z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#1A1513] text-white z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-8 border-l border-[#C5A880]/20 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-8 border-b border-white/10">
+        <div class="flex flex-col">
+          <span class="text-xl tracking-[0.25em] font-serif uppercase text-white">LE SALON</span>
+          <span class="text-[8px] tracking-[0.35em] uppercase text-[#C5A880]">PHNOM PENH</span>
+        </div>
+        <button id="close-mobile-menu" class="text-white/70 hover:text-white p-1" aria-label="Close Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-5 pt-8 text-sm tracking-[0.2em] uppercase">
+        <a href="index.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Home</a>
+        <a href="about.html" class="text-white/80 hover:text-[#C5A880] transition-colors">About</a>
+        <a href="services.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Services</a>
+        <a href="gallery.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Gallery</a>
+        <a href="experience.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Experience</a>
+        <a href="booking.html" class="text-white hover:text-[#C5A880] transition-colors">Booking</a>
+        <a href="contact.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pt-8 border-t border-white/10 space-y-4">
+      <a href="tel:+85570467412" class="flex items-center justify-center space-x-2 text-xs tracking-wider text-[#C5A880]">
+        <span>+855 70 467 412</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- BOOKING HERO -->
+    <section class="relative min-h-[460px] flex items-center justify-center bg-[#1A1513] text-white overflow-hidden pt-24 pb-16">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1920&q=80" alt="Le Salon Booking" class="w-full h-full object-cover opacity-35">
+        <div class="cinematic-overlay"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-4">
+        <span class="text-xs tracking-[0.35em] uppercase text-[#C5A880] font-medium">
+          PERSONAL RESERVATION
+        </span>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-light tracking-tight text-white">
+          Book Your Appointment
+        </h1>
+        <p class="text-sm sm:text-base text-white/80 font-light max-w-xl mx-auto">
+          Choose your service and tell us when you'd like to visit.
+        </p>
+      </div>
+    </section>
+
+    <!-- FORM & LIVE SUMMARY SECTION -->
+    <section class="py-20 lg:py-28 bg-[#FAF8F5]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          
+          <!-- Booking Form Card -->
+          <div class="lg:col-span-8 bg-white p-8 sm:p-12 border border-[#E2D7C7] shadow-xl">
+            <div class="space-y-2 mb-8">
+              <span class="text-xs tracking-[0.25em] uppercase text-[#9F825A] font-semibold">RESERVATION DETAILS</span>
+              <h2 class="text-2xl sm:text-3xl font-serif text-[#1A1513]">Request Your Visit</h2>
+              <p class="text-xs text-[#7A726A] font-light">
+                Please provide your details below. Our team will review schedule availability and contact you promptly.
+              </p>
+            </div>
+
+            <form id="booking-form" class="space-y-6">
+              
+              <!-- Row 1: Full Name & Phone -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="booking-name" class="block text-xs uppercase tracking-wider text-[#1A1513] font-medium mb-2">
+                    Full Name *
+                  </label>
+                  <input 
+                    type="text" 
+                    id="booking-name" 
+                    name="name" 
+                    required 
+                    placeholder="e.g. Marie Laurent" 
+                    class="w-full px-4 py-3 bg-[#FAF8F5] border border-[#E2D7C7] text-sm text-[#1A1513] focus:border-[#C5A880] focus:outline-none transition-colors"
+                  >
+                </div>
+
+                <div>
+                  <label for="booking-phone" class="block text-xs uppercase tracking-wider text-[#1A1513] font-medium mb-2">
+                    Phone Number *
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="booking-phone" 
+                    name="phone" 
+                    required 
+                    placeholder="e.g. +855 70 467 412" 
+                    class="w-full px-4 py-3 bg-[#FAF8F5] border border-[#E2D7C7] text-sm text-[#1A1513] focus:border-[#C5A880] focus:outline-none transition-colors"
+                  >
+                </div>
+              </div>
+
+              <!-- Row 2: Email & Service -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label for="booking-email" class="block text-xs uppercase tracking-wider text-[#1A1513] font-medium mb-2">
+                    Email Address *
+                  </label>
+                  <input 
+                    type="email" 
+                    id="booking-email" 
+                    name="email" 
+                    required 
+                    placeholder="marie@example.com" 
+                    class="w-full px-4 py-3 bg-[#FAF8F5] border border-[#E2D7C7] text-sm text-[#1A1513] focus:border-[#C5A880] focus:outline-none transition-colors"
+                  >
+                </div>
+
+                <div>
+                  <label for="booking-service" class="block text-xs uppercase tracking-wider text-[#1A1513] font-medium mb-2">
+                    Select Service *
+                  </label>
+                  <select 
+                    id="booking-service" 
+                    name="service" 
+                    required 
+                    class="w-full px-4 py-3 bg-[#FAF8F5] border border-[#E2D7C7] text-sm text-[#1A1513] focus:border-[#C5A880] focus:outline-none transition-colors"
+                  >
+                    <option value="" disabled selected>Loading Services...</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Row 3: Preferred Date, Preferred Time & Guests -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                <div>
+                  <label for="booking-date" class="block text-xs uppercase tracking-wider text-[#1A1513] font-medium mb-2">
+                    Preferred Date *
+                  </label>
+                  <input 
+                    type="date" 
+                    id="booking-date" 
+                    name="date" 
+                    required 
+                    class="w-full px-4 py-3 bg-[#FAF8F5] border border-[#E2D7C7] text-sm text-[#1A1513] focus:border-[#C5A880] focus:outline-none transition-colors"
+                  >
+                </div>
+
+                <div>
+                  <label for="booking-time" class="block text-xs uppercase tracking-wider text-[#1A1513] font-medium mb-2">
+                    Preferred Time *
+                  </label>
+                  <select 
+                    id="booking-time" 
+                    name="time" 
+                    required 
+                    class="w-full px-4 py-3 bg-[#FAF8F5] border border-[#E2D7C7] text-sm text-[#1A1513] focus:border-[#C5A880] focus:outline-none transition-colors"
+                  >
+                    <option value="" disabled selected>Select Time</option>
+                    <option value="10:00 AM">Morning (10:00 AM)</option>
+                    <option value="11:30 AM">Morning (11:30 AM)</option>
+                    <option value="01:30 PM">Afternoon (01:30 PM)</option>
+                    <option value="03:00 PM">Afternoon (03:00 PM)</option>
+                    <option value="04:30 PM">Late Afternoon (04:30 PM)</option>
+                    <option value="06:00 PM">Evening (06:00 PM)</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="booking-guests" class="block text-xs uppercase tracking-wider text-[#1A1513] font-medium mb-2">
+                    Number of Guests
+                  </label>
+                  <select 
+                    id="booking-guests" 
+                    name="guests" 
+                    class="w-full px-4 py-3 bg-[#FAF8F5] border border-[#E2D7C7] text-sm text-[#1A1513] focus:border-[#C5A880] focus:outline-none transition-colors"
+                  >
+                    <option value="1" selected>1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4+">4+ Guests (Group)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Row 4: Additional Message -->
+              <div>
+                <label for="booking-message" class="block text-xs uppercase tracking-wider text-[#1A1513] font-medium mb-2">
+                  Additional Message / Special Requests
+                </label>
+                <textarea 
+                  id="booking-message" 
+                  name="message" 
+                  rows="4" 
+                  placeholder="Share any details about your hair length, inspiration photos, or special event timings..." 
+                  class="w-full px-4 py-3 bg-[#FAF8F5] border border-[#E2D7C7] text-sm text-[#1A1513] focus:border-[#C5A880] focus:outline-none transition-colors"
+                ></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="pt-4">
+                <button type="submit" class="w-full luxury-button-gold py-4 text-xs tracking-[0.2em]">
+                  Request Appointment
+                </button>
+              </div>
+
+              <p class="text-[11px] text-[#7A726A] text-center italic">
+                * Note: Submitting this form requests an appointment time. Our salon coordinator will contact you to confirm availability.
+              </p>
+
+            </form>
+          </div>
+
+          <!-- Live Summary Card & Direct Contact Info -->
+          <div class="lg:col-span-4 space-y-6">
+            
+            <!-- Live Preview -->
+            <div class="bg-white p-8 border border-[#E2D7C7] shadow-md space-y-6">
+              <span class="text-xs tracking-[0.25em] uppercase text-[#9F825A] font-semibold block border-b border-[#E2D7C7] pb-3">
+                Appointment Preview
+              </span>
+
+              <div class="space-y-4 text-xs text-[#7A726A]">
+                <div>
+                  <span class="uppercase tracking-wider font-semibold text-[#1A1513] block">Client</span>
+                  <span id="summary-name" class="text-sm font-serif italic text-[#1A1513]">Your Name</span>
+                </div>
+
+                <div>
+                  <span class="uppercase tracking-wider font-semibold text-[#1A1513] block">Selected Ritual</span>
+                  <span id="summary-service" class="text-sm font-medium text-[#9F825A]">Select service</span>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                  <div>
+                    <span class="uppercase tracking-wider font-semibold text-[#1A1513] block">Date</span>
+                    <span id="summary-date" class="text-xs">Choose date</span>
+                  </div>
+                  <div>
+                    <span class="uppercase tracking-wider font-semibold text-[#1A1513] block">Time</span>
+                    <span id="summary-time" class="text-xs">Choose time</span>
+                  </div>
+                </div>
+
+                <div>
+                  <span class="uppercase tracking-wider font-semibold text-[#1A1513] block">Guests</span>
+                  <span id="summary-guests" class="text-xs">1 Guest</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Direct Contact & WhatsApp Card -->
+            <div class="bg-[#1A1513] text-white p-8 space-y-5 border border-[#C5A880]/30 shadow-md">
+              <span class="text-xs tracking-[0.25em] uppercase text-[#C5A880] font-semibold block">
+                Immediate Inquiries
+              </span>
+              <p class="text-xs text-white/70 font-light leading-relaxed">
+                Prefer to speak directly with our atelier coordinator or request same-day availability?
+              </p>
+
+              <div class="space-y-3 pt-2">
+                <a href="tel:+85570467412" class="flex items-center space-x-3 text-xs tracking-wider text-white hover:text-[#C5A880] transition-colors">
+                  <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#C5A880]">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="block text-[10px] text-white/50 uppercase">Telephone</span>
+                    <span class="font-medium text-sm">+855 70 467 412</span>
+                  </div>
+                </a>
+
+                <a href="https://wa.me/85570467412" target="_blank" rel="noopener noreferrer" class="flex items-center space-x-3 text-xs tracking-wider text-white hover:text-[#C5A880] transition-colors pt-2">
+                  <div class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-[#C5A880]">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.073-1.025-.052-.756-.242-1.637-.813-2.385-1.562-.748-.748-1.32-1.629-1.562-2.385-.125-.391-.097-.713-.052-1.025.05-.333.419-1.026.824-1.17.135-.047.283-.07.419-.07.13 0 .26.005.372.03.111.025.263.155.333.327l.633 1.527c.07.172.04.372-.07.511l-.39.489c-.07.087-.07.218 0 .305.353.44.825.912 1.265 1.265.087.07.218.07.305 0l.489-.39c.139-.11.339-.14.511-.07l1.527.633c.172.07.302.222.327.333.025.112.03.242.03.372 0 .136-.023.284-.07.419z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <span class="block text-[10px] text-white/50 uppercase">WhatsApp Inquiry</span>
+                    <span class="font-medium text-sm">Message Us Directly</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="pt-4 border-t border-white/10 text-[11px] text-white/50 italic">
+                Opening hours — Please contact us for current availability
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONFIRMATION MODAL -->
+    <div id="booking-confirmation-modal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 transition-opacity duration-300">
+      <div class="modal-card max-w-lg w-full bg-white p-8 sm:p-10 border border-[#C5A880] shadow-2xl space-y-6 transform scale-95 transition-transform duration-300 text-center">
+        
+        <div class="w-14 h-14 rounded-full bg-[#FAF8F5] border border-[#C5A880] mx-auto flex items-center justify-center text-[#9F825A]">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 13l4 4L19 7"/>
+          </svg>
+        </div>
+
+        <div class="space-y-3">
+          <span class="text-[10px] tracking-[0.3em] uppercase text-[#9F825A] font-semibold">REQUEST RECEIVED</span>
+          <h3 class="text-2xl font-serif text-[#1A1513]">Thank You, <span id="modal-client-name">Valued Client</span></h3>
+          <p class="text-sm text-[#7A726A] font-light leading-relaxed">
+            Thank you! Your appointment request has been received. Our team will contact you to confirm your appointment.
+          </p>
+        </div>
+
+        <div class="bg-[#FAF8F5] p-5 border border-[#E2D7C7] text-left text-xs text-[#7A726A] space-y-2">
+          <p><strong>Requested Service:</strong> <span id="modal-service" class="text-[#1A1513]">Signature Service</span></p>
+          <p><strong>Requested Time:</strong> <span id="modal-date-time" class="text-[#1A1513]">Scheduled Date & Time</span></p>
+          <p class="text-[11px] text-[#9F825A] italic pt-1">
+            Note: Appointments are confirmed personally by our salon concierge.
+          </p>
+        </div>
+
+        <div class="pt-2 space-y-3">
+          <a id="modal-whatsapp-link" href="#" target="_blank" rel="noopener noreferrer" class="block w-full text-center bg-[#25D366] text-white py-3 text-xs tracking-wider font-semibold uppercase hover:bg-[#20bd5a] transition-colors shadow">
+            Confirm Faster via WhatsApp →
+          </a>
+          <button id="modal-close-btn" class="w-full luxury-button-outline py-3 text-xs">
+            Return to Le Salon
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="bg-[#14100E] text-white border-t border-white/10 pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4 space-y-4">
+          <a href="index.html" class="inline-flex flex-col">
+            <span class="text-2xl tracking-[0.28em] font-serif uppercase text-white">LE SALON</span>
+            <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">PHNOM PENH</span>
+          </a>
+          <p class="text-sm font-serif italic text-white/70">Beauty, Refined.</p>
+          <p class="text-xs text-white/60 font-light leading-relaxed max-w-sm">
+            Parisian elegance meets modern Phnom Penh luxury. Providing bespoke hair couture, restorative nail care, and serene beauty rituals.
+          </p>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Navigation</h4>
+          <ul class="space-y-2.5 text-xs tracking-wider uppercase text-white/70">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Le Salon</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Signature Services</a></li>
+            <li><a href="gallery.html" class="hover:text-white transition-colors">Visual Gallery</a></li>
+            <li><a href="experience.html" class="hover:text-white transition-colors">Our Experience</a></li>
+            <li><a href="booking.html" class="hover:text-white transition-colors">Book an Appointment</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Location & Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Contact Le Salon</h4>
+          <address class="not-italic text-xs text-white/70 space-y-2 leading-relaxed">
+            <p>Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+            <p>Telephone: <a href="tel:+85570467412" class="text-white hover:text-[#C5A880] font-medium">+855 70 467 412</a></p>
+            <p class="text-white/50 italic pt-1">Opening hours — Please contact us for current availability</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="pt-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 tracking-wider">
+        <p>© 2026 Le Salon Phnom Penh. All Rights Reserved.</p>
+        <p class="mt-4 sm:mt-0 text-[11px] text-white/40">Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>

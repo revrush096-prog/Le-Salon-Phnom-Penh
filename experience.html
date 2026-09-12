@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Le Salon Experience | Luxury Beauty Journey Phnom Penh</title>
+  <meta name="description" content="Immerse yourself in the Le Salon Experience: Arrive, Relax, Transform, and Leave Confident. A luxury beauty ritual in the heart of Phnom Penh, Cambodia.">
+  <link rel="canonical" href="https://maps.app.goo.gl/MwFyLr1H8VQd4ocv5">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            salon: {
+              ivory: '#FAF8F5',
+              cream: '#F6F2EB',
+              sand: '#EDE6DB',
+              champagne: '#E2D7C7',
+              gold: '#C5A880',
+              'gold-dark': '#9F825A',
+              espresso: '#1A1513',
+              'espresso-light': '#28221E',
+              muted: '#7A726A'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Le Salon Phnom Penh",
+    "telephone": "+85570467412",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Preah Ang Non (St. 102)",
+      "addressLocality": "Phnom Penh",
+      "postalCode": "12202",
+      "addressCountry": "KH"
+    },
+    "url": "https://maps.app.goo.gl/MwFyLr1H8VQd4ocv5"
+  }
+  </script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1A1513] font-sans antialiased overflow-x-hidden selection:bg-[#C5A880]/30">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 header-transparent">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <a href="index.html" class="group flex flex-col items-start focus:outline-none">
+        <span class="logo-text text-xl sm:text-2xl tracking-[0.28em] font-serif uppercase text-white transition-colors duration-300 group-hover:text-[#C5A880]">
+          LE SALON
+        </span>
+        <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">
+          PHNOM PENH
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 lg:space-x-9 text-xs tracking-[0.18em] uppercase font-medium">
+        <a href="index.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Home</a>
+        <a href="about.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">About</a>
+        <a href="services.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Services</a>
+        <a href="gallery.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Gallery</a>
+        <a href="experience.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Experience</a>
+        <a href="booking.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Booking</a>
+        <a href="contact.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="booking.html" class="hidden sm:inline-flex luxury-button-gold px-5 py-2.5 rounded-none text-xs tracking-[0.16em]">
+          Book an Appointment
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OVER DRAWER -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/60 z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#1A1513] text-white z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-8 border-l border-[#C5A880]/20 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-8 border-b border-white/10">
+        <div class="flex flex-col">
+          <span class="text-xl tracking-[0.25em] font-serif uppercase text-white">LE SALON</span>
+          <span class="text-[8px] tracking-[0.35em] uppercase text-[#C5A880]">PHNOM PENH</span>
+        </div>
+        <button id="close-mobile-menu" class="text-white/70 hover:text-white p-1" aria-label="Close Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-5 pt-8 text-sm tracking-[0.2em] uppercase">
+        <a href="index.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Home</a>
+        <a href="about.html" class="text-white/80 hover:text-[#C5A880] transition-colors">About</a>
+        <a href="services.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Services</a>
+        <a href="gallery.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Gallery</a>
+        <a href="experience.html" class="text-white hover:text-[#C5A880] transition-colors">Experience</a>
+        <a href="booking.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Booking</a>
+        <a href="contact.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pt-8 border-t border-white/10 space-y-4">
+      <a href="booking.html" class="block w-full text-center luxury-button-gold py-3 text-xs">
+        Book an Appointment
+      </a>
+      <a href="tel:+85570467412" class="flex items-center justify-center space-x-2 text-xs tracking-wider text-[#C5A880]">
+        <span>+855 70 467 412</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- FULL SCREEN CINEMATIC HERO -->
+    <section class="relative h-screen min-h-[650px] w-full flex items-center justify-center overflow-hidden bg-[#1A1513]">
+      <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80" class="cinematic-video-bg">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-stylist-combing-a-womans-hair-in-a-salon-42861-large.mp4" type="video/mp4">
+      </video>
+      <div class="cinematic-overlay"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white space-y-6">
+        <span class="text-xs tracking-[0.35em] uppercase text-[#C5A880] font-medium">
+          A FOUR-STAGE SENSORY CAMPAIGN
+        </span>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-light tracking-tight text-white leading-tight">
+          The Le Salon Experience
+        </h1>
+        <p class="max-w-xl mx-auto text-base sm:text-lg text-white/85 font-light leading-relaxed">
+          More than an appointment. A choreographed ritual of calm, personal artistry, and restored confidence in central Phnom Penh.
+        </p>
+        <div class="pt-4">
+          <a href="#arrive" class="luxury-button-gold px-8 py-3.5 text-xs">
+            Begin the Journey
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAGE 1: ARRIVE -->
+    <section id="arrive" class="py-24 lg:py-32 bg-[#FAF8F5]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6 space-y-6 reveal-on-scroll">
+            <span class="text-xs tracking-[0.3em] uppercase text-[#9F825A] font-semibold">
+              STAGE 01
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#1A1513]">
+              ARRIVE
+            </h2>
+            <div class="gold-divider-left"></div>
+            <p class="text-lg font-serif italic text-[#1A1513]">
+              A warm and welcoming atmosphere.
+            </p>
+            <p class="text-[#7A726A] text-base leading-relaxed font-light">
+              As you enter from Preah Ang Non street, the energetic pulse of Phnom Penh fades. You are welcomed into a light-filled space bathed in soft ivory, warm stone, and calming botanical scents.
+            </p>
+            <p class="text-[#7A726A] text-sm leading-relaxed font-light">
+              Your coat and belongings are taken, refreshing herbal water or tea is offered, and your senior stylist sits with you for an unhurried conversation about your personal goals.
+            </p>
+          </div>
+
+          <div class="lg:col-span-6 reveal-on-scroll">
+            <div class="relative card-image-wrapper p-3 bg-white border border-[#E2D7C7] shadow-xl">
+              <div class="aspect-[4/3] sm:aspect-[16/11] bg-[#EDE6DB] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80" alt="Arrive at Le Salon Phnom Penh" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERMEZZO VIDEO BREAK -->
+    <section class="relative py-28 bg-[#1A1513] overflow-hidden">
+      <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1920&q=80" class="cinematic-video-bg opacity-30">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-hairdresser-washing-a-womans-hair-in-a-salon-42862-large.mp4" type="video/mp4">
+      </video>
+      <div class="cinematic-overlay-subtle"></div>
+      <div class="relative z-10 max-w-3xl mx-auto px-6 text-center text-white space-y-4">
+        <span class="text-xs tracking-[0.35em] uppercase text-[#C5A880]">DECOMPRESSION</span>
+        <h3 class="text-3xl sm:text-4xl font-serif font-light">Allow the World Outside to Dissolve</h3>
+      </div>
+    </section>
+
+    <!-- STAGE 2: RELAX -->
+    <section id="relax" class="py-24 lg:py-32 bg-[#F6F2EB]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6 order-2 lg:order-1 reveal-on-scroll">
+            <div class="relative card-image-wrapper p-3 bg-white border border-[#E2D7C7] shadow-xl">
+              <div class="aspect-[4/3] sm:aspect-[16/11] bg-[#EDE6DB] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1200&q=80" alt="Relaxing Hair Basin Experience" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 order-1 lg:order-2 space-y-6 reveal-on-scroll">
+            <span class="text-xs tracking-[0.3em] uppercase text-[#9F825A] font-semibold">
+              STAGE 02
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#1A1513]">
+              RELAX
+            </h2>
+            <div class="gold-divider-left"></div>
+            <p class="text-lg font-serif italic text-[#1A1513]">
+              Take a moment away from the everyday.
+            </p>
+            <p class="text-[#7A726A] text-base leading-relaxed font-light">
+              Transition to our dedicated sensory shampoo sanctuary. Reclined beneath gentle ambient lighting, you will experience our signature scalp cleansing ritual combined with acupressure massage.
+            </p>
+            <p class="text-[#7A726A] text-sm leading-relaxed font-light">
+              Nourishing organic elixirs and warm towels release neck and shoulder tension, preparing your hair fiber and state of mind for transformation.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STAGE 3: TRANSFORM -->
+    <section id="transform" class="py-24 lg:py-32 bg-[#FAF8F5]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6 space-y-6 reveal-on-scroll">
+            <span class="text-xs tracking-[0.3em] uppercase text-[#9F825A] font-semibold">
+              STAGE 03
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#1A1513]">
+              TRANSFORM
+            </h2>
+            <div class="gold-divider-left"></div>
+            <p class="text-lg font-serif italic text-[#1A1513]">
+              Discover a look created around you.
+            </p>
+            <p class="text-[#7A726A] text-base leading-relaxed font-light">
+              Back at the styling chair, master craftsmanship takes center stage. Whether sculpted with French shears, layered with multidimensional hand-painted highlights, or polished at the nail atelier, every touch is measured and precise.
+            </p>
+            <p class="text-[#7A726A] text-sm leading-relaxed font-light">
+              We focus on balance, movement, and touchable softness, creating a silhouette that looks magnificent in every lighting condition.
+            </p>
+          </div>
+
+          <div class="lg:col-span-6 reveal-on-scroll">
+            <div class="relative card-image-wrapper p-3 bg-white border border-[#E2D7C7] shadow-xl">
+              <div class="aspect-[4/3] sm:aspect-[16/11] bg-[#EDE6DB] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Transforming Hair Styling" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- STAGE 4: LEAVE CONFIDENT -->
+    <section id="leave-confident" class="py-24 lg:py-32 bg-[#F6F2EB] border-t border-[#E2D7C7]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6 order-2 lg:order-1 reveal-on-scroll">
+            <div class="relative card-image-wrapper p-3 bg-white border border-[#E2D7C7] shadow-xl">
+              <div class="aspect-[4/3] sm:aspect-[16/11] bg-[#EDE6DB] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1200&q=80" alt="Leave Confident Finish" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 order-1 lg:order-2 space-y-6 reveal-on-scroll">
+            <span class="text-xs tracking-[0.3em] uppercase text-[#9F825A] font-semibold">
+              STAGE 04
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#1A1513]">
+              LEAVE CONFIDENT
+            </h2>
+            <div class="gold-divider-left"></div>
+            <p class="text-lg font-serif italic text-[#1A1513]">
+              Finish your experience feeling refreshed and confident.
+            </p>
+            <p class="text-[#7A726A] text-base leading-relaxed font-light">
+              The final reveal is an empowering moment. Your stylist demonstrates how effortlessly you can recreate and maintain your look at home, recommends gentle formulations, and ensures you feel completely satisfied.
+            </p>
+            <p class="text-[#7A726A] text-sm leading-relaxed font-light">
+              You step back out onto Preah Ang Non radiating poise, poise, and effortless luxury.
+            </p>
+            <div class="pt-4">
+              <a href="booking.html" class="luxury-button-gold px-8 py-3.5 text-xs">
+                Experience Le Salon
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="bg-[#14100E] text-white border-t border-white/10 pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4 space-y-4">
+          <a href="index.html" class="inline-flex flex-col">
+            <span class="text-2xl tracking-[0.28em] font-serif uppercase text-white">LE SALON</span>
+            <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">PHNOM PENH</span>
+          </a>
+          <p class="text-sm font-serif italic text-white/70">Beauty, Refined.</p>
+          <p class="text-xs text-white/60 font-light leading-relaxed max-w-sm">
+            Parisian elegance meets modern Phnom Penh luxury. Providing bespoke hair couture, restorative nail care, and serene beauty rituals.
+          </p>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Navigation</h4>
+          <ul class="space-y-2.5 text-xs tracking-wider uppercase text-white/70">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Le Salon</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Signature Services</a></li>
+            <li><a href="gallery.html" class="hover:text-white transition-colors">Visual Gallery</a></li>
+            <li><a href="experience.html" class="hover:text-white transition-colors">Our Experience</a></li>
+            <li><a href="booking.html" class="hover:text-white transition-colors">Book an Appointment</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Location & Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Contact Le Salon</h4>
+          <address class="not-italic text-xs text-white/70 space-y-2 leading-relaxed">
+            <p>Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+            <p>Telephone: <a href="tel:+85570467412" class="text-white hover:text-[#C5A880] font-medium">+855 70 467 412</a></p>
+            <p class="text-white/50 italic pt-1">Opening hours — Please contact us for current availability</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="pt-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 tracking-wider">
+        <p>© 2026 Le Salon Phnom Penh. All Rights Reserved.</p>
+        <p class="mt-4 sm:mt-0 text-[11px] text-white/40">Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

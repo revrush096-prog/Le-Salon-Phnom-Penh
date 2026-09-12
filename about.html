@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Story Behind Le Salon | Luxury Beauty Salon Phnom Penh</title>
+  <meta name="description" content="Learn about Le Salon Phnom Penh: Parisian elegance meets modern Phnom Penh luxury. Discover our philosophy, approach, and commitment to beauty with intention.">
+  <link rel="canonical" href="https://maps.app.goo.gl/MwFyLr1H8VQd4ocv5">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            salon: {
+              ivory: '#FAF8F5',
+              cream: '#F6F2EB',
+              sand: '#EDE6DB',
+              champagne: '#E2D7C7',
+              gold: '#C5A880',
+              'gold-dark': '#9F825A',
+              espresso: '#1A1513',
+              'espresso-light': '#28221E',
+              muted: '#7A726A'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BeautySalon",
+    "name": "Le Salon Phnom Penh",
+    "image": "https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+85570467412",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Preah Ang Non (St. 102)",
+      "addressLocality": "Phnom Penh",
+      "postalCode": "12202",
+      "addressCountry": "KH"
+    },
+    "url": "https://maps.app.goo.gl/MwFyLr1H8VQd4ocv5"
+  }
+  </script>
+</head>
+<body class="bg-[#FAF8F5] text-[#1A1513] font-sans antialiased overflow-x-hidden selection:bg-[#C5A880]/30">
+
+  <!-- HEADER -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6 header-transparent">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <a href="index.html" class="group flex flex-col items-start focus:outline-none">
+        <span class="logo-text text-xl sm:text-2xl tracking-[0.28em] font-serif uppercase text-white transition-colors duration-300 group-hover:text-[#C5A880]">
+          LE SALON
+        </span>
+        <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">
+          PHNOM PENH
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center space-x-7 lg:space-x-9 text-xs tracking-[0.18em] uppercase font-medium">
+        <a href="index.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Home</a>
+        <a href="about.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">About</a>
+        <a href="services.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Services</a>
+        <a href="gallery.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Gallery</a>
+        <a href="experience.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Experience</a>
+        <a href="booking.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Booking</a>
+        <a href="contact.html" class="nav-link-item text-white/90 hover:text-[#C5A880] transition-colors py-1">Contact</a>
+      </nav>
+
+      <div class="flex items-center space-x-4">
+        <a href="booking.html" class="hidden sm:inline-flex luxury-button-gold px-5 py-2.5 rounded-none text-xs tracking-[0.16em]">
+          Book an Appointment
+        </a>
+        <button id="mobile-menu-btn" class="md:hidden text-white p-2 focus:outline-none" aria-label="Open Navigation Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 7h16M4 12h16M4 17h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE SLIDE-OVER DRAWER -->
+  <div id="mobile-drawer-backdrop" class="fixed inset-0 bg-black/60 z-50 hidden opacity-0 transition-opacity duration-300"></div>
+  <div id="mobile-drawer" class="fixed top-0 right-0 w-80 max-w-[85vw] h-full bg-[#1A1513] text-white z-50 transform translate-x-full transition-transform duration-300 ease-out flex flex-col justify-between p-8 border-l border-[#C5A880]/20 shadow-2xl">
+    <div>
+      <div class="flex items-center justify-between pb-8 border-b border-white/10">
+        <div class="flex flex-col">
+          <span class="text-xl tracking-[0.25em] font-serif uppercase text-white">LE SALON</span>
+          <span class="text-[8px] tracking-[0.35em] uppercase text-[#C5A880]">PHNOM PENH</span>
+        </div>
+        <button id="close-mobile-menu" class="text-white/70 hover:text-white p-1" aria-label="Close Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="flex flex-col space-y-5 pt-8 text-sm tracking-[0.2em] uppercase">
+        <a href="index.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Home</a>
+        <a href="about.html" class="text-white hover:text-[#C5A880] transition-colors">About</a>
+        <a href="services.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Services</a>
+        <a href="gallery.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Gallery</a>
+        <a href="experience.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Experience</a>
+        <a href="booking.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Booking</a>
+        <a href="contact.html" class="text-white/80 hover:text-[#C5A880] transition-colors">Contact</a>
+      </nav>
+    </div>
+
+    <div class="pt-8 border-t border-white/10 space-y-4">
+      <a href="booking.html" class="block w-full text-center luxury-button-gold py-3 text-xs">
+        Book an Appointment
+      </a>
+      <a href="tel:+85570467412" class="flex items-center justify-center space-x-2 text-xs tracking-wider text-[#C5A880]">
+        <span>+855 70 467 412</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ABOUT HERO -->
+    <section class="relative min-h-[550px] lg:min-h-[620px] flex items-center justify-center bg-[#1A1513] text-white overflow-hidden pt-24 pb-16">
+      <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1920&q=80" alt="Le Salon Phnom Penh Interior" class="w-full h-full object-cover opacity-35">
+        <div class="cinematic-overlay"></div>
+      </div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center space-y-5">
+        <div class="inline-flex items-center space-x-3 text-xs tracking-[0.35em] uppercase text-[#C5A880] font-medium">
+          <span class="w-8 h-px bg-[#C5A880]"></span>
+          <span>ATELIER HERITAGE</span>
+          <span class="w-8 h-px bg-[#C5A880]"></span>
+        </div>
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-serif font-light tracking-tight text-white">
+          The Story Behind Le Salon
+        </h1>
+        <p class="text-lg sm:text-xl font-serif italic text-white/85">
+          Beauty with intention.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 1: OUR STORY -->
+    <section class="py-24 lg:py-32 bg-[#FAF8F5]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          
+          <div class="lg:col-span-6 space-y-6 reveal-on-scroll">
+            <span class="text-xs tracking-[0.3em] uppercase text-[#9F825A] font-semibold">
+              ORIGINS & INSPIRATION
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#1A1513] leading-tight">
+              Our Story
+            </h2>
+            <div class="gold-divider-left"></div>
+
+            <p class="text-[#7A726A] text-base leading-relaxed font-light">
+              Le Salon Phnom Penh was born from a singular vision: to create a beauty sanctuary where European precision and aesthetic restraint meet the warmth, hospitality, and vibrant character of Cambodia’s capital.
+            </p>
+
+            <p class="text-[#7A726A] text-sm sm:text-base leading-relaxed font-light">
+              Located on Preah Ang Non (St. 102), our atelier is intentionally designed as an unhurried retreat from the fast pace of city life. We believe beauty is not an assembly line; it is a conversation, an art form, and a dedicated personal ritual.
+            </p>
+
+            <div class="pt-2">
+              <blockquote class="border-l-2 border-[#C5A880] pl-4 py-1 italic font-serif text-lg text-[#1A1513]">
+                "We set out to create an atelier where clients don’t just receive a service, but genuinely feel cared for from the moment they arrive."
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 reveal-on-scroll">
+            <div class="relative card-image-wrapper p-3 bg-white border border-[#E2D7C7] shadow-xl">
+              <div class="aspect-[4/5] bg-[#EDE6DB] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1200&q=80" alt="Hairstyling in Phnom Penh atelier" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CINEMATIC VIDEO BREAK -->
+    <section class="relative py-32 lg:py-40 bg-[#1A1513] overflow-hidden">
+      <video autoplay muted loop playsinline preload="metadata" poster="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=1920&q=80" class="cinematic-video-bg opacity-35">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-stylist-combing-a-womans-hair-in-a-salon-42861-large.mp4" type="video/mp4">
+      </video>
+      <div class="cinematic-overlay-subtle"></div>
+
+      <div class="relative z-10 max-w-4xl mx-auto px-6 text-center text-white space-y-6">
+        <span class="text-xs tracking-[0.35em] uppercase text-[#C5A880] font-medium">
+          ATMOSPHERE
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-light leading-tight">
+          Where Parisian Elegance Meets Modern Phnom Penh Luxury
+        </h2>
+        <p class="max-w-xl mx-auto text-sm sm:text-base text-white/80 font-light leading-relaxed">
+          Subtle tones of warm ivory, cream, champagne, and soft espresso create a soothing architectural landscape designed for comfort and sensory restoration.
+        </p>
+      </div>
+    </section>
+
+    <!-- SECTION 3: OUR PHILOSOPHY & OUR APPROACH -->
+    <section class="py-24 lg:py-32 bg-[#F6F2EB]">
+      <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-20">
+        
+        <!-- Philosophy Split -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="lg:col-span-6 order-2 lg:order-1 reveal-on-scroll">
+            <div class="relative card-image-wrapper p-3 bg-white border border-[#E2D7C7] shadow-lg">
+              <div class="aspect-[4/5] bg-[#EDE6DB] overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?auto=format&fit=crop&w=1200&q=80" alt="Color and hair consultation" class="w-full h-full object-cover">
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 order-1 lg:order-2 space-y-6 reveal-on-scroll">
+            <span class="text-xs tracking-[0.3em] uppercase text-[#9F825A] font-semibold">
+              CORE BELIEFS
+            </span>
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-serif font-light text-[#1A1513]">
+              Our Philosophy
+            </h2>
+            <div class="gold-divider-left"></div>
+
+            <p class="text-[#7A726A] text-base leading-relaxed font-light">
+              We practice <em>beauty with intention</em>. This means honoring natural hair drape, respecting skin barrier health, and selecting restorative ingredients that maintain long-term integrity over quick, harsh transformations.
+            </p>
+
+            <div class="space-y-4 pt-2">
+              <div class="flex items-start space-x-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#C5A880] mt-2 flex-shrink-0"></span>
+                <p class="text-sm text-[#7A726A]"><strong>Honoring Individuality:</strong> Every head of hair and hand has unique biology, requires custom tension, and responds to bespoke formulas.</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#C5A880] mt-2 flex-shrink-0"></span>
+                <p class="text-sm text-[#7A726A]"><strong>Calm Atmosphere:</strong> We manage client spacing to maintain a tranquil, quiet, and refined ambiance.</p>
+              </div>
+              <div class="flex items-start space-x-3">
+                <span class="w-1.5 h-1.5 rounded-full bg-[#C5A880] mt-2 flex-shrink-0"></span>
+                <p class="text-sm text-[#7A726A]"><strong>Craftsmanship First:</strong> Continuous refinement of European cutting methods, French balayage painting, and nail hygiene protocols.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Visual Storytelling Timeline / Approach -->
+        <div class="space-y-12 reveal-on-scroll">
+          <div class="text-center space-y-2 max-w-xl mx-auto">
+            <span class="text-xs tracking-[0.3em] uppercase text-[#9F825A] font-semibold">
+              INTENTIONAL METHODOLOGY
+            </span>
+            <h3 class="text-3xl sm:text-4xl font-serif font-light text-[#1A1513]">
+              Our Approach
+            </h3>
+            <div class="gold-divider"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <div class="bg-white p-8 border border-[#E2D7C7] space-y-3">
+              <span class="text-xs font-serif text-[#9F825A] uppercase tracking-widest">Phase 01</span>
+              <h4 class="text-lg font-serif text-[#1A1513]">Diagnostic Dialogue</h4>
+              <p class="text-xs sm:text-sm text-[#7A726A] font-light leading-relaxed">
+                We sit with you to understand your lifestyle, daily styling habits, texture, and personal expectations.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 border border-[#E2D7C7] space-y-3">
+              <span class="text-xs font-serif text-[#9F825A] uppercase tracking-widest">Phase 02</span>
+              <h4 class="text-lg font-serif text-[#1A1513]">Sensory Preparation</h4>
+              <p class="text-xs sm:text-sm text-[#7A726A] font-light leading-relaxed">
+                A restorative botanical cleanse and scalp massage that relieves tension and primes strands for treatment.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 border border-[#E2D7C7] space-y-3">
+              <span class="text-xs font-serif text-[#9F825A] uppercase tracking-widest">Phase 03</span>
+              <h4 class="text-lg font-serif text-[#1A1513]">Artisanal Execution</h4>
+              <p class="text-xs sm:text-sm text-[#7A726A] font-light leading-relaxed">
+                Deliberate, unhurried cutting, color painting, or nail grooming utilizing premium ergonomic tools.
+              </p>
+            </div>
+
+            <div class="bg-white p-8 border border-[#E2D7C7] space-y-3">
+              <span class="text-xs font-serif text-[#9F825A] uppercase tracking-widest">Phase 04</span>
+              <h4 class="text-lg font-serif text-[#1A1513]">Homecare Empowerment</h4>
+              <p class="text-xs sm:text-sm text-[#7A726A] font-light leading-relaxed">
+                Simple, actionable techniques and product advice so your look remains effortlessly elevated between visits.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: THE EXPERIENCE TEASER -->
+    <section class="py-24 bg-[#1A1513] text-white text-center">
+      <div class="max-w-3xl mx-auto px-6 space-y-6">
+        <span class="text-xs tracking-[0.35em] uppercase text-[#C5A880] font-medium">
+          STEP INSIDE
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-serif font-light leading-tight">
+          Immerse Yourself in the Journey
+        </h2>
+        <p class="text-white/80 text-sm sm:text-base font-light leading-relaxed">
+          From the initial greeting to the final moment you step back into Phnom Penh feeling renewed, explore each step of the Le Salon experience.
+        </p>
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="experience.html" class="luxury-button-gold px-8 py-3.5 text-xs">
+            Our Experience Page
+          </a>
+          <a href="booking.html" class="luxury-button-outline-light px-8 py-3.5 text-xs">
+            Reserve a Time
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY FOOTER -->
+  <footer class="bg-[#14100E] text-white border-t border-white/10 pt-20 pb-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+        <div class="md:col-span-4 space-y-4">
+          <a href="index.html" class="inline-flex flex-col">
+            <span class="text-2xl tracking-[0.28em] font-serif uppercase text-white">LE SALON</span>
+            <span class="text-[9px] tracking-[0.38em] uppercase text-[#C5A880] font-medium -mt-0.5">PHNOM PENH</span>
+          </a>
+          <p class="text-sm font-serif italic text-white/70">Beauty, Refined.</p>
+          <p class="text-xs text-white/60 font-light leading-relaxed max-w-sm">
+            Parisian elegance meets modern Phnom Penh luxury. Providing bespoke hair couture, restorative nail care, and serene beauty rituals.
+          </p>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Navigation</h4>
+          <ul class="space-y-2.5 text-xs tracking-wider uppercase text-white/70">
+            <li><a href="index.html" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-white transition-colors">About Le Salon</a></li>
+            <li><a href="services.html" class="hover:text-white transition-colors">Signature Services</a></li>
+            <li><a href="gallery.html" class="hover:text-white transition-colors">Visual Gallery</a></li>
+            <li><a href="experience.html" class="hover:text-white transition-colors">Our Experience</a></li>
+            <li><a href="booking.html" class="hover:text-white transition-colors">Book an Appointment</a></li>
+            <li><a href="contact.html" class="hover:text-white transition-colors">Location & Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-4 space-y-4">
+          <h4 class="text-xs tracking-[0.25em] uppercase font-semibold text-[#C5A880]">Contact Le Salon</h4>
+          <address class="not-italic text-xs text-white/70 space-y-2 leading-relaxed">
+            <p>Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+            <p>Telephone: <a href="tel:+85570467412" class="text-white hover:text-[#C5A880] font-medium">+855 70 467 412</a></p>
+            <p class="text-white/50 italic pt-1">Opening hours — Please contact us for current availability</p>
+          </address>
+        </div>
+      </div>
+
+      <div class="pt-12 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-white/50 tracking-wider">
+        <p>© 2026 Le Salon Phnom Penh. All Rights Reserved.</p>
+        <p class="mt-4 sm:mt-0 text-[11px] text-white/40">Preah Ang Non (St. 102), Phnom Penh 12202, Cambodia</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
